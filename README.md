@@ -1,6 +1,8 @@
 # Smart Contract sample on Hardhat 2 
 
-Tested system: Ubuntu 24.04.3 LTS + NodeJS v18.20.8
+Tested system: 
+1. Ubuntu 24.04.3 LTS + NodeJS v18.20.8
+2. Windows 10 + NodeJS v18.20.8
 ==========================================================
 $ git clone https://github.com/admin-ibots/contract-template
 $ cd contract-template
