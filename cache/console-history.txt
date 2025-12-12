@@ -1,0 +1,27 @@
+console.log("New Contract Message:", await newContract.getMessage());
+newContract = await Factory.attach("0x1D2714d4c5fb92b0f5ee1FB35d694EB8856bAa6c");
+console.log("New Contract Message:", await newContract.getMessage());
+const newContract = await Factory.attach(NEW_ADDRESS);
+console.log("New Contract Message:", await newContract.getMessage());
+// The new contract returns its current (modified) state
+console.log("Old Contract Message:", await oldContract.getMessage()); 
+// The old contract returns its original state
+const newContract = await Factory.attach(NEW_ADDRESS); 
+// Attach to the new, writable version
+const oldContract = await Factory.attach(OLD_ADDRESS); 
+// Attach to the old, read-only version
+const Factory = await ethers.getContractFactory("HelloWorld");
+const NEW_ADDRESS = "0x...TheNewOne..."; 
+// Paste the NEW contract address here
+const OLD_ADDRESS = "0x41C1a9A24dC71e5961663576C19cf3089ce420a0"; 
+// Paste the OLD contract address here
+console.log("Current message:", message);
+// 5. Print the result
+const message = await helloWorld.getMessage();
+// 4. Call the read-only function (getMessage)
+const helloWorld = await HelloWorldFactory.attach(contractAddress);
+// 3. Attach the Factory to the deployed contract address
+const HelloWorldFactory = await ethers.getContractFactory("HelloWorld");
+// 2. Get the ContractFactory object (using the contract name)
+const contractAddress = "0x41C1a9A24dC71e5961663576C19cf3089ce420a0";
+// 1. Define the address of the deployed contract

@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract HelloWorld {
+    // A string variable to hold our message
+    string private message;
+
+    // Constructor: Runs only once when the contract is deployed
+    constructor() {
+        message = "Hello World!";
+    }
+
+    // A function to read the message. The `view` keyword means it doesn't cost gas.
+    function getMessage() public view returns (string memory) {
+        return message;
+    }
+}
